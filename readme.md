@@ -28,4 +28,6 @@ clone repo from top of page
 
 ## Running the App
 
-    Open terminal to file path and enter command node index.js
+1. Open terminal to file path
+2. Enter command
+   node index.js
