@@ -16,10 +16,17 @@ Search github for the top 10 most starrred repos.
 
 ## Getting Started
 
-clone repo
+1. clone repo
 
 ```
 git clone https://github.com/Islaster/starredGithub.git
+```
+
+2. create a .env file
+3. Put env in file
+
+```
+GITHUB_TOKEN="your personal access token(classic)"
 ```
 
 ### Installation

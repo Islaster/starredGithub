@@ -1,9 +1,8 @@
 const axios = require("axios");
 const inquirer = require("inquirer");
-require("dotenv").config();
 
 const GITHUB_API_URL = "https://api.github.com/search/repositories";
-const GITHUB_API_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_API_TOKEN = procss.env.GITHUB_TOKEN; // Replace with your own token
 
 async function fetchMostStarredRepos(startDate, endDate) {
   try {
@@ -18,15 +17,10 @@ async function fetchMostStarredRepos(startDate, endDate) {
       },
     });
 
-    const { items } = response.data;
-
-    // Display information about the top 10 most starred repositories
-    for (let i = 0; i < 10 && i < items.length; i++) {
-      const repo = items[i];
-      console.log(`#${i + 1}: ${repo.name} - ${repo.stargazers_count} stars`);
-    }
+    return response.data.items;
   } catch (error) {
     console.error("Error fetching data from GitHub API:", error);
+    return [];
   }
 }
 
@@ -44,13 +38,20 @@ async function getUserInput() {
     },
   ]);
 
-  const { startDate, endDate } = answers;
-  return { startDate, endDate };
+  return answers;
+}
+
+async function displayTopRepositories(repositories) {
+  for (let i = 0; i < 10 && i < repositories.length; i++) {
+    const repo = repositories[i];
+    console.log(`#${i + 1}: ${repo.name} - ${repo.stargazers_count} stars`);
+  }
 }
 
 async function main() {
   const { startDate, endDate } = await getUserInput();
-  await fetchMostStarredRepos(startDate, endDate);
+  const repositories = await fetchMostStarredRepos(startDate, endDate);
+  displayTopRepositories(repositories);
 }
 
 main(); // Call the main function to start the program
