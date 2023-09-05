@@ -15,7 +15,11 @@ Search github for the top 10 most starrred repos.
 
 ## Getting Started
 
-clone repo from top of page
+clone repo
+
+```
+git clone https://github.com/Islaster/starredGithub.git
+```
 
 ### Installation
 
