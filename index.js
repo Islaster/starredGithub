@@ -1,10 +1,5 @@
-const express = require("express");
-const { Octokit, App } = require("octokit");
 const axios = require("axios");
 const inquirer = require("inquirer");
-const cors = require("cors");
-const app = express();
-const PORT = 3000;
 const GITHUB_API_URL = "https://api.github.com/search/repositories";
 require("dotenv").config();
 
