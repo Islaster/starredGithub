@@ -1,4 +1,4 @@
-    # Starred Github
+# Starred Github
 
 Search github for the top 10 most starrred repos.
 
