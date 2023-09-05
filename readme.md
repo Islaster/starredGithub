@@ -12,6 +12,7 @@ Search github for the top 10 most starrred repos.
 ## Prerequisites
 
 1. Node.js
+2. Personal Github Token
 
 ## Getting Started
 
