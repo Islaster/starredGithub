@@ -24,7 +24,14 @@ clone repo from top of page
 
 2. open terminal
    go to cloned repo
-   enter command npm i or npm install
+   enter command
+   ```
+    npm i
+   ```
+   or
+   ```
+   npm install
+   ```
 
 ## Running the App
 
