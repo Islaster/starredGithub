@@ -30,5 +30,6 @@ clone repo from top of page
 
 1. Open terminal to file path
 2. Enter command
-
-node index.js
+   ```
+   node index.js
+   ```
